@@ -31,6 +31,17 @@ public class TestMain5 extends Application {
         // 让控制不显示(默认是显示的)
 //        label.setVisible(false);
         label.setVisible(true);
+        // 设置透明度
+        label.setOpacity(0.5);
+        // 设置旋转度数
+        label.setRotate(70);
+        // 设置平移
+        label.setTranslateX(100);
+        label.setTranslateY(100);
+        // 获取父节点
+        System.out.println(label.getParent());
+        // 获取当前场景
+        System.out.println(label.getScene());
         // 创建一个容器
         AnchorPane anchorPane = new AnchorPane();
         // 组件添加到容器里
