@@ -7,13 +7,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 
 public class draw extends Application {
-    static int zoomCircle = 60;
+    static int zoomCircle = 60;// 图片位置
     static Image iconImage = new Image("image/五子棋-线.png");
     static Image imgCircleNot = new Image("image/未选中圆圈.png");
     static Image imgCircleOn = new Image("image/选中.png");
@@ -24,13 +25,15 @@ public class draw extends Application {
     static String blackSideWait = "  | 黑方";
     static Button startButton = new Button("开始游戏");
     static boolean flag = true;
+    static final int LINEAMOUNT = 23; // 行数
+    static Circle[][] circles = new Circle[21][21];
 
     @Override
     public void start(Stage stage) throws Exception {
         AnchorPane root = new AnchorPane();
         Scene scene = new Scene(root, 900, 800);
-        Line[] linesRow = new Line[23];
-        Line[] linesCol = new Line[23];
+        Line[] linesRow = new Line[LINEAMOUNT];
+        Line[] linesCol = new Line[LINEAMOUNT];
         // 软件图标
         stage.getIcons().add(iconImage);
         // 中间图标
@@ -57,6 +60,25 @@ public class draw extends Application {
             root.getChildren().add(linesRow[i]);
             root.getChildren().add(linesCol[i]);
         }
+        // 在棋盘交叉点上绘制小点
+        int lineRow = 80;
+        int lineCol = 90;
+        for (int i = 0; i < circles[0].length; i++) {
+            for (int j = 0; j < circles[0].length; j++) {
+                circles[i][j] = new Circle();
+                circles[i][j].setRadius(9);
+                circles[i][j].setLayoutX(lineRow);
+                circles[i][j].setLayoutY(lineCol);
+                circles[i][j].setStroke(Color.BLACK); // 边框颜色
+                circles[i][j].setFill(Color.BLACK); // 中间颜色
+                root.getChildren().add(circles[i][j]);
+                lineRow += 30;
+            }
+            lineRow = 80;
+            lineCol += 30;
+
+        }
+
         // 插入图片 - 白方
         ImageView imageView1 = new ImageView(imgCircleNot);
         imageView1.setFitHeight(zoomCircle);
