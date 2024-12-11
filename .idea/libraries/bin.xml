@@ -2,12 +2,20 @@
   <library name="bin">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" />
+      <root url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" />
+      <root url="file://$PROJECT_DIR$/resources/SDKS/javafx-sdk-21.0.5/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" />
+      <root url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" />
+      <root url="file://$PROJECT_DIR$/resources/SDKS/javafx-sdk-21.0.5/lib" />
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/resources/SDKS/javafx-sdk-21.0.5/lib" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../environment/SDK/javafx-sdk-21.0.5/lib" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$PROJECT_DIR$/resources/SDKS/javafx-sdk-21.0.5/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
